@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace IceCreamPricer.UnitTests
 {
-    [Test]
-    public void HolidayAndTempAbove80Returns6Dollars()
-    {
-    }
+    //[Test]
+    //public void HolidayAndTempAbove80Returns6Dollars()
+    //{
+    //}
 }
