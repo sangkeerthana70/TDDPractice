@@ -21,7 +21,17 @@ namespace IceCreamPricer.UnitTests
             //var actual = pricer.GetPrice(date, input);
             //Console.WriteLine(actual);
             Assert.Throws<System.ArgumentException>(() => pricer.GetPrice(date, temperature));
+        }
 
+        [Test]
+        public void NonHolidayAndTempBetween40And59Returns3Dollars()
+        {
+            DateTime date = new DateTime(2019, 1, 29);
+            var temp = 53;
+            var expected = 3;
+            var actual = pricer.GetPrice(date, temp);
+            Console.WriteLine(actual);
+            Assert.AreEqual(expected, actual);
         }
 
 

@@ -11,9 +11,12 @@ namespace IceCreamPriceServices
        
         
 
-        public bool isHoliday(DateTime d)
+        public bool IsHoliday(DateTime d)
         {
-            
+            if((d.DayOfWeek.Equals("Saturday") || (d.DayOfWeek.Equals("Sunday"))))
+            {
+                return true;
+            }
             return false;
             
         }

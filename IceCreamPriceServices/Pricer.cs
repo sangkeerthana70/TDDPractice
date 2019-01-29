@@ -21,6 +21,11 @@ namespace IceCreamPriceServices
             {
                 throw new System.ArgumentException("Ice cream shop is closed");
             }
+
+            if(Temp >= 40 && Temp < 59 && !hc.IsHoliday(d))
+            {
+                return 3;
+            }
             
             return 0;
 
