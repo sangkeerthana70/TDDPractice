@@ -27,11 +27,19 @@ namespace IceCreamPriceServices
                 return 3;
             }
 
-            if(Temp >= 60 && Temp <= 79)
+            if(Temp >= 60 && Temp <= 79 && !hc.IsHoliday(d))
             {
                 return 4;
             }
-            
+
+            if(Temp > 80 && !hc.IsHoliday(d))
+            {
+                return 5;
+            }
+            if (Temp >= 40 && Temp <= 59 && hc.IsHoliday(d))
+            {
+                return 4;
+            }
             return 0;
 
         }

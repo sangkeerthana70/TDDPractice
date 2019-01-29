@@ -15,9 +15,14 @@ namespace IceCreamPriceServices
         {
             if((d.DayOfWeek.Equals("Saturday") || (d.DayOfWeek.Equals("Sunday"))))
             {
+                //Console.WriteLine(d.DayOfWeek);
                 return true;
             }
-            return false;
+            else
+            {
+                return false;
+            }
+            
             
         }
     }
