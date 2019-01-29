@@ -24,6 +24,7 @@ namespace IceCreamPricer.UnitTests
         }
 
         [Test]
+        //Test1
         public void NonHolidayAndTempBetween40And59Returns3Dollars()
         {
             DateTime date = new DateTime(2019, 1, 29);
@@ -33,6 +34,19 @@ namespace IceCreamPricer.UnitTests
             Console.WriteLine(actual);
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        // test2
+        public void NonHolidayAndTempBetween60And79Returns4Dollars()
+        {
+            DateTime date = new DateTime(2019, 1, 30);
+            var temp = 71;
+            var expected = 4;
+            var actual = pricer.GetPrice(date, temp);
+            Console.WriteLine(actual);
+            Assert.AreEqual(expected, actual);
+        }
+
 
 
 
