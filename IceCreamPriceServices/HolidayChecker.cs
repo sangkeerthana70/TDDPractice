@@ -13,7 +13,9 @@ namespace IceCreamPriceServices
 
         public bool isHoliday(DateTime d)
         {
+            
             return false;
+            
         }
     }
 }

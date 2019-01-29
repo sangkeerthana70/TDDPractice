@@ -21,6 +21,7 @@ namespace IceCreamPriceServices
             {
                 throw new System.ArgumentException("Ice cream shop is closed");
             }
+            
             return 0;
 
         }
