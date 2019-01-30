@@ -67,21 +67,38 @@ namespace IceCreamPricer.UnitTests
             var temp = 55;
             var expected = 4;
             var actual = pricer.GetPrice(date, temp);
-            Console.WriteLine(date.DayOfWeek);
-            Console.WriteLine(actual);
+            //Console.WriteLine(date.DayOfWeek);
+            //Console.WriteLine(actual);
             Assert.AreEqual(expected, actual);
 
         }
 
+        [Test]
+        // Test5
+        public void HolidayAndTempBetween60And79Returns5Dollars()
+        {
+            DateTime date = new DateTime(2019, 2, 3);
+            var temp = 79;
+            var expected = 5;
+            var actual = pricer.GetPrice(date, temp);
+            
+            //Console.WriteLine(actual);
+            Assert.AreEqual(expected, actual);
 
-        // NonHolidayBetween60And79Returns4Dollars
 
-        //NonHolidayAbove80Returns5Dollars
+        }
 
-        //HolidayBetween40And59Returns4Dollars
+        [Test]
+        // Test6
+        public void HolidayAndTempAbove80Returns6Dollars()
+        {
+            DateTime date = new DateTime(2019, 2, 9);
+            var temp = 89;
+            var expected = 6;
+            var actual = pricer.GetPrice(date, temp);           
+            Console.WriteLine(actual);
+            Assert.AreEqual(expected, actual);
 
-        //HolidayBetween60And79Returns5Dollars
-
-        //HolidayAbove80Returns6Dollars
+        }
     }
 }
